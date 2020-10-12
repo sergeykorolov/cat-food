@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/cat-food/static/css/main.ed935409.chunk.css",
+    "main.js": "/cat-food/static/js/main.a10ad956.chunk.js",
+    "main.js.map": "/cat-food/static/js/main.a10ad956.chunk.js.map",
+    "runtime-main.js": "/cat-food/static/js/runtime-main.2a8d3a4e.js",
+    "runtime-main.js.map": "/cat-food/static/js/runtime-main.2a8d3a4e.js.map",
+    "static/js/2.e0b21ce0.chunk.js": "/cat-food/static/js/2.e0b21ce0.chunk.js",
+    "static/js/2.e0b21ce0.chunk.js.map": "/cat-food/static/js/2.e0b21ce0.chunk.js.map",
+    "index.html": "/cat-food/index.html",
+    "precache-manifest.af883211c1e1dea64dfc508941793583.js": "/cat-food/precache-manifest.af883211c1e1dea64dfc508941793583.js",
+    "service-worker.js": "/cat-food/service-worker.js",
+    "static/css/main.ed935409.chunk.css.map": "/cat-food/static/css/main.ed935409.chunk.css.map",
+    "static/js/2.e0b21ce0.chunk.js.LICENSE.txt": "/cat-food/static/js/2.e0b21ce0.chunk.js.LICENSE.txt",
+    "static/media/cat.png": "/cat-food/static/media/cat.78ad2bee.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2a8d3a4e.js",
+    "static/js/2.e0b21ce0.chunk.js",
+    "static/css/main.ed935409.chunk.css",
+    "static/js/main.a10ad956.chunk.js"
+  ]
+}
