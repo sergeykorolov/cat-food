@@ -1,0 +1,25 @@
+body {
+  margin: 0;
+}
+
+.app-wrapper{
+  background: url("./images/main_background.png");
+  min-height: 100vh;  //100% высоты экрана
+  font-family: "Trebuchet MS", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  &:before, &:after {
+    content: '';
+    display: block;
+    width: 100%;
+    box-shadow: 0 0 80px 80px #00000080;
+    position: absolute;
+    top: 0;
+  }
+  &:after{
+    top: inherit;
+    bottom: 0;
+  }
+}

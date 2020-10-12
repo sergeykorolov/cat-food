@@ -1,0 +1,268 @@
+.cardBlock {
+  $titleColor: #000000;
+  $selectedColor: #d91667;
+  $defaultColor: #1698d9;
+  $defaultHoverColor: #2ea8e6;
+  $selectedHoverColor: #e62e7a;
+  $backColor: #f2f2f2;
+  $headerTextSelectedColor: #e52e7a;
+  $headerTextDefaultColor: #666666;
+  $disabledColor: #b3b3b3;
+
+  margin-right: 40px;
+  margin-left: 40px;
+  margin-bottom: 30px;
+
+  .card {
+    @function cornerBackground($borderColor) {
+      @return linear-gradient(-45deg, $backColor, $backColor 28px, $borderColor 0, $borderColor 32px, transparent 0);
+    }
+
+    &.defaultColor {
+      .corner {
+        background: cornerBackground($defaultColor);
+      }
+
+      .cardHeader {
+        border-color: $defaultColor;
+      }
+
+      .headerText {
+        color: $headerTextDefaultColor
+      }
+
+      .cardInfo {
+        border-color: $defaultColor;
+      }
+
+      .weightBlock {
+        background-color: $defaultColor;
+      }
+    }
+
+    &.defaultColor:hover {
+      .corner {
+        background: cornerBackground($defaultHoverColor);
+      }
+
+      .cardHeader {
+        border-color: $defaultHoverColor;
+      }
+
+      .headerText {
+        color: $headerTextDefaultColor
+      }
+
+      .cardInfo {
+        border-color: $defaultHoverColor;
+      }
+
+      .weightBlock {
+        background-color: $defaultHoverColor;
+      }
+    }
+
+    &.selectedColor {
+      .corner {
+        background: cornerBackground($selectedColor);
+      }
+
+      .cardHeader {
+        border-color: $selectedColor;
+      }
+
+      .headerText {
+        color: $headerTextSelectedColor
+      }
+
+      .cardInfo {
+        border-color: $selectedColor;
+      }
+
+      .weightBlock {
+        background-color: $selectedColor;
+      }
+    }
+
+    &.selectedColor:not(.blockHover):hover {
+      .corner {
+        background: cornerBackground($selectedHoverColor);
+      }
+
+      .cardHeader {
+        border-color: $selectedHoverColor;
+      }
+
+      .headerText {
+        color: $headerTextSelectedColor
+      }
+
+      .cardInfo {
+        border-color: $selectedHoverColor;
+      }
+
+      .weightBlock {
+        background-color: $selectedHoverColor;
+      }
+    }
+
+    .corner {
+      width: 43px;
+      height: 43px;
+      display: inline-block;
+      vertical-align: top;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    .cardHeader {
+      display: inline-block;
+      height: 39px;
+      width: 273px;
+      background-color: $backColor;
+      border: 4px solid;
+      border-bottom: none;
+      border-left: none;
+      border-radius: 0 10px 0 0;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      .headerText {
+        font-size: 16px;
+        font-weight: 400;
+        margin-left: 5px;
+        margin-top: 14px;
+      }
+    }
+
+    .cardInfo {
+      width: 312px;
+      height: 433px;
+      border: 4px solid;
+      border-top: none;
+      border-radius: 0 0 10px 10px;
+      background-color: $backColor;
+      overflow: hidden;
+      position: relative;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      .cardText {
+        margin-left: 45px;
+      }
+
+      .title {
+        color: $titleColor;
+        font-size: 48px;
+        font-weight: bold;
+        margin-left: -3px;
+      }
+
+      .ingredient {
+        font-size: 24px;
+        font-weight: bold;
+        color: $titleColor;
+        margin-top: -1px;
+        margin-bottom: 13px;
+      }
+
+      .details {
+        font-size: 14px;
+        font-weight: 400;
+        color: $headerTextDefaultColor;
+        margin-bottom: -2px;
+      }
+
+      .catImg {
+        position: absolute;
+        bottom: -93px;
+        left: -29px;
+      }
+
+      .weightBlock {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        position: absolute;
+        right: 10px;
+        bottom: 10px;
+        z-index: 1;
+      }
+
+      .weightText {
+        text-align: center;
+        color: #ffffff;
+        font-size: 42px;
+        font-weight: 400;
+        margin-top: 5px;
+
+        .kg {
+          font-size: 21px;
+          font-weight: 400;
+          margin-top: -8px;
+        }
+      }
+    }
+
+    &.disabled {
+      .corner {
+        background: cornerBackground($disabledColor);
+        &:hover {
+          cursor: default;
+        }
+      }
+      .cardHeader, .cardInfo {
+        border-color: $disabledColor;
+        &:hover {
+          cursor: default;
+        }
+      }
+      .headerText, .cardText, .catImg {
+        opacity: 0.5;
+      }
+      .weightBlock {
+        background-color: $disabledColor;
+      }
+    }
+  }
+
+  .footerText {
+    font-size: 13px;
+    font-weight: 400;
+    color: #ffffff;
+    margin-top: 16px;
+    text-align: center;
+
+    .buy {
+      color: $defaultColor;
+      font-weight: bold;
+      display: inline;
+      margin-left: 3px;
+      border-bottom: 1px dashed;
+
+      &:hover {
+        cursor: pointer;
+        color: $defaultHoverColor;
+      }
+    }
+
+    p {
+      display: inline;
+      color: $defaultColor;
+    }
+  }
+
+  .notAvailableFooterText {
+    font-size: 13px;
+    font-weight: 400;
+    color: #ffff66;
+    margin-top: 16px;
+    text-align: center;
+  }
+}
+
