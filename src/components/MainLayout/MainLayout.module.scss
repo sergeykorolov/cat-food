@@ -1,4 +1,6 @@
 .mainLayout {
+  position: relative;
+  z-index: 1;
   .foodBlock {
     display: flex;
     width: 100%;

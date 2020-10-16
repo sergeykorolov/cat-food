@@ -1,23 +1,23 @@
-.cardBlock {
-  $titleColor: #000000;
-  $selectedColor: #d91667;
-  $defaultColor: #1698d9;
-  $defaultHoverColor: #2ea8e6;
-  $selectedHoverColor: #e62e7a;
-  $backColor: #f2f2f2;
-  $headerTextSelectedColor: #e52e7a;
-  $headerTextDefaultColor: #666666;
-  $disabledColor: #b3b3b3;
+$titleColor: #000000;
+$selectedColor: #d91667;
+$defaultColor: #1698d9;
+$defaultHoverColor: #2ea8e6;
+$selectedHoverColor: #e62e7a;
+$backColor: #f2f2f2;
+$headerTextSelectedColor: #e52e7a;
+$headerTextDefaultColor: #666666;
+$disabledColor: #b3b3b3;
 
+@function cornerBackground($borderColor) {
+  @return linear-gradient(-45deg, $backColor, $backColor 28px, $borderColor 0, $borderColor 32px, transparent 0);
+}
+
+.cardBlock {
   margin-right: 40px;
   margin-left: 40px;
   margin-bottom: 30px;
 
   .card {
-    @function cornerBackground($borderColor) {
-      @return linear-gradient(-45deg, $backColor, $backColor 28px, $borderColor 0, $borderColor 32px, transparent 0);
-    }
-
     &.defaultColor {
       .corner {
         background: cornerBackground($defaultColor);

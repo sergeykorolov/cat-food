@@ -46,7 +46,7 @@ const FoodItem = ({food, dispatch}) => {
                         <div className={styles.ingredient}>c {food.ingredient}</div>
                         <div className={styles.details}>{food.portions} порций</div>
                         <div className={styles.details}>{food.present}</div>
-                        {food.portions > 50 ? <div className={styles.details}>Заказчик доволен</div> : ""}
+                        {food.portions === 100 ? <div className={styles.details}>Заказчик доволен</div> : ""}
                     </div>
                     <div className={styles.weightBlock}>
                         <div className={styles.weightText}>{food.weight}
